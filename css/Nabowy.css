@@ -1,0 +1,237 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffcc2b;
+}
+body > div.father {
+    width: 300px;
+     height: 250px;
+     background-color:#6c1837;
+    border-radius: 20px;
+    border: 10px solid white;
+    padding: 10px;
+    position: relative;
+}
+body > div.father > div {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: inherit;
+}
+body > div.father > div > div.one {
+    width: 80%;
+    height: 100%;
+    border-radius: inherit;
+    border: 5px solid #6c1837;
+    padding: 10px 15px 0 15px;
+}
+body > div.father > div > div.one > .item {
+    width: 100%;
+    height: 75%;
+    border-radius: inherit;
+    background-color: #6c1837;
+    position: relative;
+    padding: 2px;
+}
+body > div > div > div.one > div.item > div {
+    width: 85%;
+    height: 85%;
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    border-radius: 20px 0px 15px 0px;
+    background-color: #00d2be;
+}
+body > div > div > div.one > .child {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+body > div > div > div.one > .child .parent {
+    display: flex;
+    width: 60%;
+}
+body > div > div > div.one > .child .parent div {
+    background-color: #6b1737;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    flex-basis: 100%;
+    margin-left: 2px;
+}
+body > div > div > div.one > .child .another-parent div {
+    width: 30px;
+    height: 30px;
+    background-color: #6b1737;
+    border-radius: 50%;
+}
+.firstItem {
+    display: flex;
+
+}
+body > div > div > div.two {
+    width: 20%;
+    height: 100%;
+    border-top: 10px solid #ffd7d6;
+    border-radius: 20px 0px 15px 0px;
+    background-color: #ff5d5d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+body > div > div > div.two span {
+    width: 80%;
+    height: 2px;
+    background-color: #6d1837;
+    margin-bottom: 10px;
+}
+.father::before {
+    content: "";
+    width: 40px;
+    height: 80%;
+    background-image: linear-gradient(to bottom,
+     #ffd7d7 0 15%,
+     #ff5d5d 15% 70%,
+     #e93751 70% 100%
+    );
+    position: absolute;
+    right: -40px;
+    top: 7.5%;
+    border: 10px solid #6b1737;
+    border-left: transparent;
+    z-index: -1;
+    border-radius: 0px 60px 60px 0px;
+}
+.father::after {
+    content: "";
+    width: 50px;
+    height: 80%;
+    position: absolute;
+    right: -50px;
+    top: 7.5%;
+    border: 10px solid white;
+    border-left: transparent;
+    z-index: -1;
+    border-radius: 0px 60px 60px 0px;
+}
+.bottom {
+    width: 450px;
+    height: 120px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: -333;
+}
+.bottom::after {
+    content: "";
+    height: 30px;
+    width: 100%;
+    background-color: #6c1837;
+    border-radius: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border: 5px solid white;
+    z-index: 5;
+}
+.bottom .one-of-bottom {
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    border: 10px solid #6c1837;
+    outline: 10px solid white;
+    border-bottom: transparent;
+    border-radius: 30px 30px 0px 0px;
+    z-index: 4;
+    position: relative;
+}
+.bottom .one-of-bottom::after {
+    content: "";
+    width: 70%;
+    height: 15px;
+    background-color: #f7b6ad;
+    position: absolute;
+    left: 15%;
+    top: -15px;
+}
+.bottom .one-of-bottom::before {
+    content: "";
+    height: 15px;
+    width: 5px;
+    background-color: #6c1837;
+    position: absolute;
+    top: -15px;
+    z-index: 9;
+    right: 30%;
+}
+.one-of-bottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.one-of-bottom .one-of-basic {
+    width: 150px;
+    height: 60%;
+    background-color: #6c1838;
+    display: flex;
+    justify-content: flex-end;
+    padding: 7px;
+    border-radius: 10px;
+}
+.one-of-bottom .one-of-basic .item-basic {
+    width: 80%;
+    background-color: #e69a99;
+    display: flex;
+    justify-content: space-between;
+}
+.one-of-bottom .one-of-basic .item-basic .parent-items  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+}
+.one-of-bottom .one-of-basic .item-basic .parent-items span {
+    height: 3px;
+    width: 100%;
+    background-color: #6c1837;
+    margin-bottom: 5px;
+    display: block;
+}
+.one-of-bottom .one-of-basic .item-basic .another-parent {
+    width: 30px;
+    height: 20px;
+    background-color: #6c1837;
+    border-radius: 50%;
+    align-self: center;
+    margin-right: 10px;
+    position: relative;
+}
+.one-of-bottom .one-of-basic .item-basic .another-parent span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    width: 60%;
+    height: 60%;
+    border-radius: inherit;
+    background-color: #00d2be;
+}
+.bottom .two-of-basic {
+    width: 90px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: #6c1838;
+}
